@@ -1,0 +1,10 @@
+﻿<h3 data-bind="html: displayName"></h3>
+
+<ul data-role="listview" data-inset="true" data-bind="foreach: images">
+	<li style="padding: 0px;">
+		<div data-role="collapsible" style="margin:0px;">
+			<h4 data-bind="text: title"></h4>
+			<a href="#" class="thumbnail" data-bind="click:$parent.select"> <img style="width: 260px; height: 180px;" data-bind="attr: { src: media.m }"/> </a>
+		</div>
+	</li>
+</ul>

@@ -1,0 +1,27 @@
+﻿<!-- <div class="navbar navbar-fixed-top">
+<div class="navbar-inner">
+<a class="brand" data-bind="attr: { href: router.navigationModel()[0].hash }"> <i class="icon-home"></i> <span>Durandal</span> </a>
+<ul class="nav" data-bind="foreach: router.navigationModel">
+<li data-bind="css: { active: isActive }">
+<a data-bind="attr: { href: hash }, html: title"></a>
+</li>
+</ul>
+</div>
+</div> -->
+
+<div data-role="page">
+	<div data-role="header"  style="overflow:hidden;">
+		<h1>Demo</h1>
+		<div data-role="navbar">
+			<ul data-bind="foreach: router.navigationModel">
+				<li>
+					<a data-bind="html: title, attr: { href: hash, moduleId: moduleId }"> </a>
+				</li>
+			</ul>
+		</div><!-- /navbar -->
+	</div>
+
+	<div data-role="content" class="container-fluid page-host">
+		<!--ko router: { transition:'entrance', cacheViews:true }--><!--/ko-->
+	</div>
+</div>
