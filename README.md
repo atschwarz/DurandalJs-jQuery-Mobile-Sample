@@ -1,6 +1,6 @@
 ## Durandal combined with jQuery Mobile - Sample Application
 
-This project offers a starting point for mobile application development using jQuery Mobile and Durandal.
+Due to the lack of such an example, I wrote this project to offer a starting point for mobile application development using jQuery Mobile and Durandal.
 
 ## Important things:
 
