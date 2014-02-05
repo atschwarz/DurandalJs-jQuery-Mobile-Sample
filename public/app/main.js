@@ -22,7 +22,7 @@
 	}
 });
 
-define(['durandal/system', 'durandal/app', 'durandal/viewLocator'], function(system, app, viewLocator) {
+define(['durandal/system', 'durandal/app', 'durandal/viewLocator', 'durandal/binder', 'utils/routines'], function(system, app, viewLocator) {
 	//>>excludeStart("build", true);
 	system.debug(true);
 	//>>excludeEnd("build");
@@ -31,6 +31,12 @@ define(['durandal/system', 'durandal/app', 'durandal/viewLocator'], function(sys
 	require(['jqm'], function(jqm) {
 		console.log("jQuery Mobile loaded...");
 	});
+
+	binder.bindingComplete = function (data, view, instruction) {
+        console.log("---------- bindingComplete --------");
+        if (data.__moduleId__ !== "viewmodels/shell")
+            routines.triggerCreate(view);
+    };
 
 	app.title = 'Durandal Starter Kit';
 

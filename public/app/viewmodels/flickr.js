@@ -8,10 +8,6 @@
 		displayName : 'Flickr',
 		images : ko.observableArray([]),
 
-		attached : function(viewHtml) {
-			routines.triggerCreate(viewHtml);
-		},
-
 		activate : function() {
 			//the router's activator calls this function and waits for it to complete before proceding
 			if (this.images().length > 0) {
